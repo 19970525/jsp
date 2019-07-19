@@ -1,9 +1,12 @@
 package com.sc.map;
 
+import javafx.application.Application;
+
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import javax.servlet.*;
 import java.io.IOException;
+import javax.servlet.ServletContext;
 
 @WebServlet("/map")
 public class MapAdress extends HttpServlet {
@@ -25,5 +28,7 @@ public class MapAdress extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         Context.httpSession = req.getSession();
+        req.getSession().setAttribute("12",12);
+
     }
 }

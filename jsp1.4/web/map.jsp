@@ -66,11 +66,11 @@
 
 
 
+  var mk = new BMap.Marker(point);
+  map.addOverlay(mk);
   map.panTo(point);
   // alert('您的位置：'+r.point.lng+','+r.point.lat);
-  transit.search("兰州", point);  //从起点和终端确定路程和时间
-  // alert('您的位置：'+r.point.lng+','+r.point.lat);
-  transit.search(point, "武汉");  //从起点和终端确定路程和时间
+  transit.search("兰州", "武汉");  //从起点和终端确定路程和时间
 
   //弹跳动画和标注图片
   var myIcon = new BMap.Icon("images/car.png", new BMap.Size(150,75));
@@ -80,7 +80,7 @@
 
 
 
-  map.centerAndZoom(point, 15);
+  map.centerAndZoom(point, 12);
   map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
 </script>
